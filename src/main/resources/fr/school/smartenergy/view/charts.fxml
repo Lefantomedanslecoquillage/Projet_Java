@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="fr.school.smartenergy.controller.ChartController"
+      spacing="20" style="-fx-padding: 30;">
+
+    <Label text="Visualisation graphique" style="-fx-font-size: 22; -fx-font-weight: bold;"/>
+    <Separator/>
+
+    <Label text="Évolution journalière (30 derniers jours)" style="-fx-font-weight: bold;"/>
+    <LineChart fx:id="lineChart" prefHeight="220">
+        <xAxis><CategoryAxis label="Date"/></xAxis>
+        <yAxis><NumberAxis label="Quantité"/></yAxis>
+    </LineChart>
+
+    <Label text="Consommation par bâtiment (année en cours)" style="-fx-font-weight: bold;"/>
+    <BarChart fx:id="barChart" prefHeight="220">
+        <xAxis><CategoryAxis label="Bâtiment"/></xAxis>
+        <yAxis><NumberAxis label="Quantité"/></yAxis>
+    </BarChart>
+
+    <Label text="Répartition par type d'énergie" style="-fx-font-weight: bold;"/>
+    <PieChart fx:id="pieChart" prefHeight="280"/>
+
+</VBox>
