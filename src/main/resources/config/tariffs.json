@@ -1,0 +1,8 @@
+{
+  "ELECTRICITY": 0.25,
+  "WATER": 0.004,
+  "GAS": 0.12,
+  "HEATING": 0.18,
+  "AIR_CONDITIONING": 0.22,
+  "SOLAR_PRODUCTION": -0.10
+}
