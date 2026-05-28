@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="fr.school.smartenergy.controller.AnalysisController"
+      spacing="20" style="-fx-padding: 30;">
+
+    <Label text="Analyse" style="-fx-font-size: 22; -fx-font-weight: bold;"/>
+    <Separator/>
+
+    <GridPane hgap="30" vgap="15">
+        <Label text="Bâtiment le plus consommateur :" GridPane.rowIndex="0" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+        <Label fx:id="labelTopBuilding"               GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Type d'énergie dominant :" GridPane.rowIndex="1" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+        <Label fx:id="labelDominantType"        GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Facture mensuelle estimée :" GridPane.rowIndex="2" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+        <Label fx:id="labelMonthlyBill"            GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <Separator/>
+    <Label text="Pics de consommation" style="-fx-font-size: 15; -fx-font-weight: bold;"/>
+    <ListView fx:id="listPeaks" prefHeight="150"/>
+
+    <Separator/>
+    <Label text="Alertes" style="-fx-font-size: 15; -fx-font-weight: bold;"/>
+    <ListView fx:id="listAlerts" prefHeight="120"/>
+
+    <Button text="Actualiser" onAction="#refresh"/>
+</VBox>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="fr.school.smartenergy.controller.SettingsController"
+      spacing="20" style="-fx-padding: 30;">
+
+    <Label text="Paramètres" style="-fx-font-size: 22; -fx-font-weight: bold;"/>
+    <Separator/>
+
+    <GridPane hgap="20" vgap="12">
+        <Label text="Thème :"         GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="comboTheme"   GridPane.rowIndex="0" GridPane.columnIndex="1" prefWidth="150"/>
+
+        <Label text="Devise :"         GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="fieldCurrency" GridPane.rowIndex="1" GridPane.columnIndex="1" prefWidth="150"/>
+
+        <Label text="Ville par défaut :" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="fieldCity"       GridPane.rowIndex="2" GridPane.columnIndex="1" prefWidth="150"/>
+    </GridPane>
+
+    <Separator/>
+    <Label text="Tarifs énergétiques" style="-fx-font-size: 15; -fx-font-weight: bold;"/>
+    <GridPane fx:id="gridTariffs" hgap="30" vgap="8"/>
+
+    <Button text="Sauvegarder" onAction="#onSave"/>
+</VBox>
