@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="fr.school.smartenergy.controller.BuildingFormController"
+      spacing="15" style="-fx-padding: 30; -fx-min-width: 400;">
+
+    <Label text="Bâtiment" style="-fx-font-size: 18; -fx-font-weight: bold;"/>
+    <Separator/>
+
+    <GridPane hgap="15" vgap="12">
+        <Label text="Nom :"       GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="fieldName" GridPane.rowIndex="0" GridPane.columnIndex="1" prefWidth="250"/>
+
+        <Label text="Type :"      GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="comboType" GridPane.rowIndex="1" GridPane.columnIndex="1" maxWidth="Infinity"/>
+
+        <Label text="Adresse :"   GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="fieldAddress" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Surface (m²) :" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="fieldSurface" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <Label text="Occupants :" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <TextField fx:id="fieldOccupants" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <HBox spacing="10">
+        <Button text="Enregistrer" onAction="#onSave"/>
+        <Button text="Annuler"     onAction="#onCancel"/>
+    </HBox>
+</VBox>

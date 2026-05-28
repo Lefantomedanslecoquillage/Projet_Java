@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="fr.school.smartenergy.controller.ConsumptionController"
+      spacing="15" style="-fx-padding: 30;">
+
+    <Label text="Gestion des consommations" style="-fx-font-size: 22; -fx-font-weight: bold;"/>
+    <Separator/>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Bâtiment :"/>
+        <ComboBox fx:id="filterBuilding" onAction="#onFilter"/>
+        <Label text="Type d'énergie :"/>
+        <ComboBox fx:id="filterEnergyType" onAction="#onFilter"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Button text="Ajouter"       onAction="#onAdd"/>
+        <Button text="Supprimer"     onAction="#onDelete"/>
+        <Button text="Importer CSV"  onAction="#onImportCsv"/>
+    </HBox>
+
+    <TableView fx:id="tableRecords" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colId"         text="ID"          prefWidth="50"/>
+            <TableColumn fx:id="colBuildingId" text="Bâtiment ID" prefWidth="90"/>
+            <TableColumn fx:id="colDate"       text="Date"        prefWidth="110"/>
+            <TableColumn fx:id="colTime"       text="Heure"       prefWidth="80"/>
+            <TableColumn fx:id="colEnergyType" text="Type"        prefWidth="140"/>
+            <TableColumn fx:id="colQuantity"   text="Quantité"    prefWidth="90"/>
+            <TableColumn fx:id="colCost"       text="Coût (€)"    prefWidth="90"/>
+        </columns>
+    </TableView>
+</VBox>

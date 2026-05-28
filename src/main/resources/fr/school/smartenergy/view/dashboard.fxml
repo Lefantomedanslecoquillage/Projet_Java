@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="fr.school.smartenergy.controller.DashboardController"
+      spacing="20" style="-fx-padding: 30;">
+
+    <Label text="Tableau de bord" style="-fx-font-size: 22; -fx-font-weight: bold;"/>
+    <Separator/>
+
+    <GridPane hgap="30" vgap="15">
+        <Label text="Consommation du jour :" GridPane.rowIndex="0" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+        <Label fx:id="labelDailyTotal"       GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Consommation du mois :" GridPane.rowIndex="1" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+        <Label fx:id="labelMonthlyTotal"      GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Consommation de l'année :" GridPane.rowIndex="2" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+        <Label fx:id="labelYearlyTotal"          GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Coût estimé (mois) :" GridPane.rowIndex="3" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+        <Label fx:id="labelTotalCost"       GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <Label text="Bâtiment le plus consommateur :" GridPane.rowIndex="4" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+        <Label fx:id="labelTopBuilding"               GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <Separator/>
+    <Label text="Alertes" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+    <ListView fx:id="listAlerts" prefHeight="150"/>
+
+    <Button text="Actualiser" onAction="#refresh"/>
+</VBox>

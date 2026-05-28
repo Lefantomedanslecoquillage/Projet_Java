@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="fr.school.smartenergy.controller.ConsumptionFormController"
+      spacing="15" style="-fx-padding: 30; -fx-min-width: 400;">
+
+    <Label text="Nouveau relevé" style="-fx-font-size: 18; -fx-font-weight: bold;"/>
+    <Separator/>
+
+    <GridPane hgap="15" vgap="12">
+        <Label text="Bâtiment :"       GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="comboBuilding" GridPane.rowIndex="0" GridPane.columnIndex="1" prefWidth="250"/>
+
+        <Label text="Date :"       GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <DatePicker fx:id="datePicker" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Heure (HH:mm) :" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="fieldTime"   GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Type d'énergie :"  GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="comboEnergyType" GridPane.rowIndex="3" GridPane.columnIndex="1" maxWidth="Infinity"/>
+
+        <Label text="Quantité :"        GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <TextField fx:id="fieldQuantity" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <HBox spacing="10">
+        <Button text="Enregistrer" onAction="#onSave"/>
+        <Button text="Annuler"     onAction="#onCancel"/>
+    </HBox>
+</VBox>
