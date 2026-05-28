@@ -12,24 +12,52 @@
 
     <GridPane hgap="30" vgap="15">
         <Label text="Consommation du jour :" GridPane.rowIndex="0" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
-        <Label fx:id="labelDailyTotal"       GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        <Label fx:id="labelDailyTotal" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
 
         <Label text="Consommation du mois :" GridPane.rowIndex="1" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
-        <Label fx:id="labelMonthlyTotal"      GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        <Label fx:id="labelMonthlyTotal" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
 
         <Label text="Consommation de l'année :" GridPane.rowIndex="2" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
-        <Label fx:id="labelYearlyTotal"          GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        <Label fx:id="labelYearlyTotal" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
 
         <Label text="Coût estimé (mois) :" GridPane.rowIndex="3" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
-        <Label fx:id="labelTotalCost"       GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+        <Label fx:id="labelTotalCost" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
 
         <Label text="Bâtiment le plus consommateur :" GridPane.rowIndex="4" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
-        <Label fx:id="labelTopBuilding"               GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+        <Label fx:id="labelTopBuilding" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
     </GridPane>
 
     <Separator/>
+
+    <Label text="Météo actuelle" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+
+    <GridPane hgap="30" vgap="10">
+        <Label text="Température :" GridPane.rowIndex="0" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+        <Label fx:id="labelWeatherTemperature" text="Température : -- °C" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Humidité :" GridPane.rowIndex="1" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+        <Label fx:id="labelWeatherHumidity" text="Humidité : -- %" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Vent :" GridPane.rowIndex="2" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+        <Label fx:id="labelWeatherWind" text="Vent : -- km/h" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Précipitations :" GridPane.rowIndex="3" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+        <Label fx:id="labelWeatherPrecipitation" text="Précipitations : -- mm" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <Label text="État météo :" GridPane.rowIndex="4" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+        <Label fx:id="labelWeatherDescription" text="État : --" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+        <Label text="Conseil énergie :" GridPane.rowIndex="5" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+        <Label fx:id="labelWeatherAdvice" text="Conseil : --" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+    </GridPane>
+
+
+    <Separator/>
+
+
     <Label text="Alertes" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
     <ListView fx:id="listAlerts" prefHeight="150"/>
 
     <Button text="Actualiser" onAction="#refresh"/>
 </VBox>
+
